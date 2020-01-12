@@ -4,7 +4,7 @@
         <meta charset="utf-8"> 
         <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
 
-        <title>Example Student's HCDE 439 Physical Computing Page!</title> 
+        <title>Assignment 1: Blink!</title> 
 
         <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
 
@@ -12,13 +12,78 @@
     <body> 
 
         <div class="header">
-            <h1>Example Student's Assignment 1!</h1>
+            <h1>Assignment 1: Blink!</h1>
+            <div>
+            <img src="assignment1Asset/blinkSimulation.gif" width=400></a>
+            </div>
+
+        </div>
+
+        <div class = "documentation">
+            <h2>Overview</h2>
+            <p>You will create a schematic for at least 3 LEDs connected to your Arduino, which you will implement as a circuit on your breadboard. You will write firmware (in a .ino file) 
+                for the circuit that makes the LEDs blink in a pattern. </p>
+            
+            <h2>Schematic and Circuit</h2>
+
             <p>
-            <img src="red-panda.jpg" width=400></a>
+                For my circuit, I used the red, green and yellow LED. 
+                Since the voltage across the red, green and yellow LEDs is 1.8V, the calculations is as follows:
             </p>
+
+            <div>
+                <img src = "assignment1Asset/schematic.jpeg" width = 40%>
+            </div>
+
             <p>
-            Here is all the documentation for assignment 1!
+                The actual circuit is shown below. I used a 220 ohm resistor across each LED.
             </p>
+
+            <div>
+                <img src = "assignment1Asset/circuit.jpeg" width = 40%>
+            </div>
+
+
+
+            <h2>Code Snippet</h2>
+            <code id = "setup1">
+                void setup() { <br>
+                    //initialize LED <br>
+                    pinMode(13, OUTPUT); //Initialize red LED <br>
+                    pinMode(12,OUTPUT); //Initialize green LED <br>
+                    pinMode(11, OUTPUT); //Initialize yellow LED <br>
+                  }<br>
+            </code>
+            <code id = "loop1">
+                  void loop() { <br>
+                    // put your main code here, to run repeatedly: <br>
+                    digitalWrite(13, HIGH); // switches the red LED on <br>
+                    delay(500); // Wait for 500 millisecond(s)<br>
+                    digitalWrite(13, LOW); // switches the red LED off<br>
+                    delay(500); // Wait for 500 millisecond(s)<br>
+                    
+                    digitalWrite(12, HIGH); // switches the green LED on<br>
+                    delay(500);<br>
+                    digitalWrite(12, LOW); // switches the green LED on<br>
+                    delay(500);<br>
+                    
+                    digitalWrite(11, HIGH); // switches the yello LED on<br>
+                    delay(500);<br>
+                    digitalWrite(11, LOW); // switches the yellow LED on<br>
+                  }<br>
+            </code>
+
+            <h2>Circuit Operation</h2>
+
+            <p>
+                An animated gif of my circuit.
+            </p>
+
+            <div class = "blinkingGif">
+                <img src = "assignment1Asset/blinkAnimated.gif" width = 40%>
+            </div>
+
+
         </div>
         
     </body>
