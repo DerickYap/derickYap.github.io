@@ -1,0 +1,79 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+
+        <title>Assignment 2: Fade!</title> 
+
+        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+
+    </head> 
+    <body> 
+
+        <div class="header">
+            <h1>Assignment 3: Input Output!</h1>
+            <div>
+            <img src="assignment3Asset/a3Simulation.gif" width=400></a>
+            </div>
+
+        </div>
+
+        <div class = "documentation">
+            <h2>Overview</h2>
+            <p>I created a schematic, circuit, and code that uses an LED and a variable resistor.
+            the code contains for-loops, condition statements, map functions, analogRead(), and analogWrite().</p>
+            
+            <h2>Schematic and Circuit</h2>
+
+            <p>
+                For my circuit, I used a green LED and a photoresistor. 
+                The calculations and schematic are shown below:
+            </p>
+
+            <div>
+                <img src = "assignment3Asset/a3Calc.jpg" width = 500px height = 300px>
+                <img src = "assignment3Asset/a3Schematic.jpg" width = 500px height = 300px> 
+            </div>
+
+            <p>
+                The actual circuit is shown below. As explained in my calculations above,
+                Since the resistance I found is 160Ω for the green LED, any resistor larger than 160Ω  can be used. 
+                Thus, I used a 1000Ω resistor across the LED. In addition, since I found the resistance across the 
+                photoresistor is 250Ω, I used a 10,000Ω resistor. Pin 11 is connected to the green LED while
+                Analog 0 is connected to the photoresistor.
+            </p>
+
+            <div>
+                <img src = "assignment3Asset/a3Circuit.jpeg" width = 40%>
+            </div>
+
+
+
+            <h2>Code Snippet</h2>
+                <img src = "assignment3Asset/a3Code.jpeg" width = 40%>
+                <p>
+                    I mapped the values between 0 and 500 because during testing. When the 
+                    circuit was exposed to a bright condition, the detected values ranged between 200 and 500.
+                    In contrast, when the lights removed from the setting, the range fell below 100.
+                </p>
+            <h2>Log of Bright conditions</h2>
+                <img src = "assignment3Asset/BrightConditions.png" width = 40%>
+            <h2>Log of Dim conditions</h2>
+                <img src= "assignment3Asset/DarkConditions.png" width = 40%>
+
+            <h2>Circuit Operation</h2>
+
+            <p>
+                An animated gif of my circuit.
+            </p>
+
+            <div class = "blinkingGif">
+                <img src = "assignment3Asset/a3Animate.gif" width = 40%>
+            </div>
+
+
+        </div>
+        
+    </body>
+</html>
