@@ -1,0 +1,70 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+
+        <title>Assignment 3: Input Output!</title> 
+
+        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+
+    </head> 
+    <body> 
+
+        <div class="header">
+            <h1>Assignment 3: Input Output!</h1>
+            <div>
+            <img src="assignment4Asset/circuitA4.jpeg" width=400></a>
+            </div>
+
+        </div>
+
+        <div class = "documentation">
+            <h2>Overview</h2>
+            <p>I created a  a schematic, circuit, and code that uses a transistor to control load power separate from logic power.</p>
+            
+            <h2>Schematic and Circuit</h2>
+
+            <p>
+                For my circuit, I used the LED strip, N channel MOFET (transistor) and the IR sensor . 
+            </p>
+
+            <div></div>
+                <img src = "assignment4Asset/schematic.jpeg" width = 500px height = 300px> 
+            </div>
+
+            <p>
+                The actual circuit is shown below. The gate (G) of transistor is connected to pin 11, drain (D) to the LED strip and an external
+                power source, and the source (S) to ground. In addition, the Y channel of the receiver is connected to pin 6, R channel to the 5 volt 
+                pin on the arduino board and G channel to ground.
+            </p>
+
+            <div>
+                <img src = "assignment4Asset/circuitA4.jpeg" width = 40%>
+            </div>
+
+
+
+            <h2>Code Snippet</h2>
+                <img src = "assignment4Asset/Code.png" width = 40%>
+                <p>
+                    The hex code 0xFF906F represents the up arrow button on the remote while the hex code 
+                    0xFFE01F represents the down arrow. 
+                </p>
+
+
+            <h2>Circuit Operation</h2>
+
+            <p>
+                An animated gif of my circuit.
+            </p>
+
+            <div class = "blinkingGif">
+                <img src = "assignment4Asset/animatedA4.gif" width = 40%>
+            </div>
+
+
+        </div>
+        
+    </body>
+</html>
