@@ -26,7 +26,9 @@
             <h2>Schematic and Circuit</h2>
 
             <p>
-                For my circuit, I connected an analog with 2 axis thumb joystick . 
+                For my circuit, I connected an analog with 2 axis thumb joystick. The ground on the analog is connected to the corresponding ground on the board.
+                The 5v channel on the analog is connected to the 5v pin on the board, the X and Y channels are connected to A0 and A1 respectively,
+                and the switch is connected to pin 2 on the board. 
             </p>
 
             <div></div>
@@ -34,9 +36,7 @@
             </div>
 
             <p>
-                The actual circuit is shown below. The ground on the analog is connected to the corresponding ground on the board.
-                The 5v channel on the analog is connected to the 5v pin on the board, the X and Y channels are connected to A0 and A1 respectively,
-                and the switch is connected to pin 2 on the board.
+                The actual circuit is shown below. 
             </p>
 
             <div>
@@ -46,12 +46,15 @@
 
 
             <h2>Ardunio Code Snippet</h2>
-                <img src = "assignment4Asset/Code.png" width = 40%>
+                <img src = "assignment5Asset/A5arduinoCode.png" width = 40%>
                 <p>
-                    Code that makes the analog joystick functional.
+                    Code that makes the analog joystick functional. Although the switch on the analog joystick is connected to 
+                    pin 2, it is not initialized here because there was no use of it for this project.  
                 </p>
+
             <h2>p5.js Code Snippet</h2>
-                <img src = "assignment4Asset/Code.png" width = 40%>
+                <img src = "assignment5Asset/A5jsCode1.png" width = 40%>
+                <img src = "assignment5Asset/A5jsCode2.png" width = 40%>
                 <p>
                     Code that makes the webpage interactive.
                 </p>
