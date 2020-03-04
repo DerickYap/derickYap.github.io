@@ -21,18 +21,20 @@
 
         <div class = "documentation">
             <h2>Overview</h2>
-            <p>I created a webpage with p5.js that interacts with data that’s coming from the arduino over serial.</p>
+            <p>I created a webpage with p5.js that interacts with data that’s coming from the arduino over serial and also
+                by interacting with the keyboard, changes the output on the arduino.</p>
             
             <h2>Schematic and Circuit</h2>
 
             <p>
                 For my circuit, I connected an analog with 2 axis thumb joystick. The ground on the analog is connected to the corresponding ground on the board.
-                The 5v channel on the analog is connected to the 5v pin on the board, the X and Y channels are connected to A0 and A1 respectively,
-                and the switch is connected to pin 2 on the board. 
+                The 5v channel on the analog is connected to the 5v pin on the board, the X and Y channels are connected to A0 and A1 respectively.
+                Additionally, I used a green LED which is connected to Pin 13. Since the resistance I found is 160 ohm, 
+                any resistor larger than 160 ohm can be used. Thus, I used a 220 ohm resistor across the LED
             </p>
 
             <div></div>
-                <img src = "assignment5Asset/A5Schematic.jpg" width = 500px height = 300px> 
+                <img src = "assignment6Asset/A6schematic.jpg" width = 500px height = 300px> 
             </div>
 
             <p>
@@ -40,23 +42,24 @@
             </p>
 
             <div>
-                <img src = "assignment5Asset/A5CuircuitSetUp.jpeg" width = 40%>
+                <img src = "assignment6Asset/A6Circuit.jpeg" width = 40%>
             </div>
 
 
 
             <h2>Ardunio Code Snippet</h2>
-                <img src = "assignment5Asset/A5arduinoCode.png" width = 40%>
+                <img src = "assignment6Asset/A6arduinoCode.png" width = 40%>
                 <p>
-                    Code that makes the analog joystick functional. Although the switch on the analog joystick is connected to 
-                    pin 2, it is not initialized here because there was no use of it for this project.  
+                    Code that makes the analog joystick functional and reads if the keyboard is pressed.
+                    If the lowercase o is pressed, the LED lights up. If the lowercase f is pressed, the LED
+                    is switched off. 
                 </p>
 
             <h2>p5.js Code Snippet</h2>
                 <img src = "assignment6Asset/jsCode1.png" width = 40%>
                 <img src = "assignment6Asset/jsCode2.png" width = 40%>
                 <p>
-                    Code that makes the webpage interactive.
+                    Code that makes the webpage interactive and sends data back to the board.
                 </p>
 
 
