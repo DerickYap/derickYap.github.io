@@ -1,0 +1,112 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+
+        <title>Final Project</title> 
+
+        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+
+    </head> 
+    <body> 
+
+        <div class="header">
+            <h1>Final Project: Sound Sensing LEDs!</h1>
+            <div>
+            <img src="finalProjectAsset/FP_Demo.gif" width=400></a>
+            <p>
+                Concept: The LEDs light up upon detecting a sound!
+            </p>
+            </div>
+
+        </div>
+
+        <div class = "documentation">
+            <h2>Summary</h2>
+            <p>
+                For my final project, I decided to build a sound detecting light source! It takes in sound as an input and produces light from the LEDs as an output! This project requires the following components:
+            </p>
+
+            <li>
+                Arduino  x1 
+            </li>
+
+            <li>
+                220Ω resistor (anything above 160Ω can be used) x3 
+            </li>
+
+            <li>
+                Green/Red/Yellow LED x3
+            </li>
+
+            <li>
+                Sound Sensor (Sound Detection Module LM393) x1
+            </li>
+
+            <li>
+                Jumper wires
+            </li>
+
+            <li>
+                9V Battery with DC x1
+            </li>
+
+            <h2>Problem</h2>
+
+            <p>
+                I wanted to build a sound detecting light source because my apartment gets really dark at night. Looking for the light switch on the wall
+                can be troublesome at times. Thus, I wanted to be able to switch the lights on without having to physically look for the switch!
+            </p>
+
+            <h2>Schematic and Circuit</h2>
+
+            <p>
+                The three green LEDs are connected to Pins 13,12 and 11. Since the voltage drop for a green LED is about 1.8V, using Ohms Law, the resistance calculated will come up to 160Ω. So, any resistor that’s above 160Ω can be used. In this case, I used the 220Ω resistor across each of the LEDs. The sound sensor has 3 channels, VCC, ground and the output. So, I connected it to the 5v pin, ground and Pin 7 on the arduino.
+            </p>
+
+            <div>
+                <img src = "finalProjectAsset/FP_Schematic_LED.jpg" width = 500px height = 300px> 
+                <img src = "finalProjectAsset/FP_Schematic_SS.jpg" width = 500px height = 300px>
+            </div>
+
+            <p>
+                The actual circuit is shown below. 
+            </p>
+
+            <div>
+                <img src = "finalProjectAsset/FP_Circuit.jpeg" width = 40%>
+            </div>
+
+
+
+            <h2>Ardunio Code Snippet</h2>
+                <img src = "finalProjectAsset/FP_CodeBlock.png" width = 60%>
+                <p>
+                    I used boolean logics to allow the LED to toggle between the different states. Implementing a simple if, else statement was sufficient to switch the LEDs on and off. So, the first time the device hears a sound, the status becomes true and the LED switches on. The second time it captures sound, the status goes back to false and switches the LED off. I used digitalWrite instead of analogWrite because I am not adjusting the brightness of the LEDs. I only need the two states (HIGH/LOW) for this project. 
+                </p>
+
+            <h2>Final Prototype</h2>
+            <img src = "finalProjectAsset/FP_FinalPrototype.jpeg" width = 40%>
+            <img src = "finalProjectAsset/FP_FinalPrototype_Dark.jpeg" width = 40%>
+            <p>
+                My final prototype looks like this where it is enclosed in a box and mounted on the wall in my apartment 
+            </p>
+                <img src = "finalProjectAsset/FP_Battery.png" width = 100%>
+            <p>
+                I decided to have the power supply outside of the encasing because I thought that it would be much more convenient to change the battery when the source eventually runs out.
+            </p>
+            <p>
+                A video of the working final prototype is shown below!
+            </p>
+
+                <video width="500" height="240" controls>
+                    <source src="finalProjectAsset/FP_Video.mp4">
+                  Your browser does not support the video tag.
+                  </video>
+    
+
+        </div>
+        
+    </body>
+</html>
